@@ -1,16 +1,28 @@
+a{
+  color:beige;
+  text-align: center;
+}
 h2{
   text-align: center;
+}
+ion-button{
+  --background:#69C8DC;
+  --border-radius: 30px;
+  color: black;
 }
 ion-card{
   --background: rgb(2,0,36);
   --background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(122,166,207,1) 0%, rgba(0,0,0,1) 100%);
   --color:black;
+    margin-top:30%;
 }
 ion-content{
   --background: url(../../assets/img/bg.png) 0 0/100% 100% no-repeat;
 }
 ion-input{
-  --background:rgba(0,0,0,0.0);
+  --background:white;
+    color: black;
+    border-radius: 10px;
 }
 ion-item{
   --background:rgba(0,0,0,0.0);
