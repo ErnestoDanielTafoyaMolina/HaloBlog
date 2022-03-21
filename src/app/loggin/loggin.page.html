@@ -1,0 +1,35 @@
+<ion-content>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-label>
+        <h2>Iniciar Sesión</h2>
+      </ion-label>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+
+        <ion-label>Correo:</ion-label>
+        <ion-input placeholder="ejemplo@ejemplo.com" [(ngModel)]="username"></ion-input>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label>Contraseña:</ion-label>
+        <ion-input placeholder="contraseña" type="password" [(ngModel)]="password"></ion-input>
+
+      </ion-item>
+      <ion-item>
+        <ion-button color="success" expand="full" fill="outline" (click)="iniciarSesion()">Ingresar</ion-button>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+  <ion-item>
+    <ion-label>¿No tienes cuenta?</ion-label><a href="#">Registrate gratis</a>
+  </ion-item>
+
+</ion-content>
