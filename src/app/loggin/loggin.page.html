@@ -1,5 +1,7 @@
 <ion-content>
 
+    <img src="../../assets/img/bg.png" alt="">
+
   <ion-card>
 
     <ion-card-header>
@@ -26,7 +28,7 @@
 
         <ion-row class="ion-align-items-center">
           <ion-col>
-            <ion-label><a href="#">¿Olvidaste la contraseña?</a></ion-label>
+            <ion-label><a (click)="pswdBu()">¿Olvidaste la contraseña?</a></ion-label>
           </ion-col>
         </ion-row>
 
@@ -39,7 +41,7 @@
 
         <ion-row class="ion-align-items-center">
           <ion-col>
-            <ion-button>Crear cuenta</ion-button>
+            <ion-button (click)="createAcount()">Crear cuenta</ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>
