@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import{ServicesService}from '../services/services.service';
 
 @Component({
   selector: 'app-create-account',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class CreateAccountPage implements OnInit {
 
-  constructor(public miRouter:Router) { }
+  constructor(public miRouter:Router, private HaloService : ServicesService) { }
 
   ngOnInit() {
   }

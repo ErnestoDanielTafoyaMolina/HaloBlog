@@ -8,37 +8,37 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-input placeholder="Nombre" type="text"></ion-input>
+          <ion-input placeholder="Nombre" type="text" [(ngModel)]="HaloService.tName"></ion-input>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-           <ion-input placeholder="Apellido" type="text"></ion-input>
+           <ion-input placeholder="Apellido" type="text" [(ngModel)]="HaloService.tLastName"></ion-input>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-input placeholder="Edad" type="number"></ion-input>
+          <ion-input placeholder="Edad" type="number"[(ngModel)]="HaloService.nAge"></ion-input>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-input placeholder="Nombre usuario" type="text"></ion-input>
+          <ion-input placeholder="Nombre usuario" type="text"[(ngModel)]="HaloService.tNickName"></ion-input>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-input placeholder="Correo electronico" type="email"></ion-input>
+          <ion-input placeholder="Correo electronico" type="email" [(ngModel)]="HaloService.tEmail"></ion-input>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-         <ion-input placeholder="Contraseña" type="password"></ion-input>
+         <ion-input placeholder="Contraseña" type="password" [(ngModel)]="HaloService.tPassword" ></ion-input>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col><ion-button (click)="goBack()">Atras</ion-button></ion-col>
-        <ion-col><ion-button (click)="goPrev()">Crear</ion-button></ion-col>
+        <ion-col><ion-button (click)="HaloService.createUser()">Crear</ion-button></ion-col>
       </ion-row>
     </ion-grid>
 
