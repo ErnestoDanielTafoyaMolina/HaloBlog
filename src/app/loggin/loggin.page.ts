@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import{ServicesService}from '../services/services.service'
 
 @Component({
   selector: 'app-loggin',
@@ -9,22 +10,8 @@ import { Router } from '@angular/router';
 export class LogginPage implements OnInit {
   username:string;
   password:string;
-  constructor(private miRouter:Router) { }
-  iniciarSesion(){
-    if (this.username === 'Dany' && this.password === '1234'){
-      let inforuser = {
-        nombre : 'Dany',
-        rol : 'admin',
-        email : '200222@utags.edu.mx'
-      };
+  constructor(private miRouter:Router,private HaloService : ServicesService) { }
 
-      localStorage.setItem('userRutas',JSON.stringify(inforuser));
-      this.miRouter.navigate(['tabs','tab1']);
-      console.log('correcto');
-  }else{
-    alert('las credenciales son incorrectas');
-  }
-}
 
   ngOnInit() {
   }

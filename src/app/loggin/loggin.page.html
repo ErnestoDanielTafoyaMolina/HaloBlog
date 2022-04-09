@@ -15,26 +15,22 @@
       <ion-grid>
         <ion-row class="ion-align-items-center">
           <ion-col>
-            <ion-input placeholder="Correo electronico" type="email" [(ngModel)]="username"></ion-input>
+            <ion-input placeholder="Correo electronico" type="email" [(ngModel)]="HaloService.tEmail"></ion-input>
           </ion-col>
         </ion-row>
 
         <ion-row class="ion-align-items-center">
           <ion-col>
-            <ion-input placeholder="Contraseña" type="password" [(ngModel)]="password"></ion-input>
+            <ion-input placeholder="Contraseña" type="password" [(ngModel)]="HaloService.tPassword"></ion-input>
           </ion-col>
 
         </ion-row>
 
-        <ion-row class="ion-align-items-center">
-          <ion-col>
-            <ion-label><a (click)="pswdBu()">¿Olvidaste la contraseña?</a></ion-label>
-          </ion-col>
-        </ion-row>
+
 
         <ion-row class="ion-align-items-center">
           <ion-col>
-            <ion-button (click)="iniciarSesion()">Ingresar</ion-button>
+            <ion-button (click)="HaloService.loggin()">Ingresar</ion-button>
           </ion-col>
 
         </ion-row>

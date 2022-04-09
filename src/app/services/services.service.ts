@@ -39,6 +39,21 @@ export class ServicesService {
     )
   }
 
+  loggin(){
+    let credentials={
+      tEmail:this.tEmail,
+      tPassword:this.tPassword
+    }
 
+    this.http.post('http://localhost:3000/api/users/logginUser',credentials).subscribe(res=>{
+      localStorage.setItem('user',JSON.stringify(res))
+      alert("correct loggin")
+      this.miRouter.navigate(['tabs','tab1']);
+    },error=>{
+      console.log("error");
+      alert("incorret user or password")
+    })
+
+  }
 
 }
