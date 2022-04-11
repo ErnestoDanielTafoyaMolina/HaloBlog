@@ -19,6 +19,19 @@ export class ServicesService {
   public usuariologgeado: any[]
   constructor(private http:HttpClient, private miRouter:Router) {
 
+    this.postlist = []
+    this.http.get('http://localhost:3000/api/post/getPost').subscribe(
+      (res:any)=>{
+        //Aqui solo se ejecuta si respondió correctamente
+        this.postlist = res
+
+      },
+      err=>{
+        //Aqui solo se ejecuta si no respondió correctamente
+        this.postlist = []
+      }
+    )
+
    }
 
    createUser(){

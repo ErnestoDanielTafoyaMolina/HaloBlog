@@ -1,14 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      publicaciones
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h1>publicaciones</h1>
-  <app-post *ngfor="let postAux of HaloService.postlist" [tPost]="postAux.tPost"></app-post>
+
+  <app-post *ngFor="let postAux of HaloService.postlist" [tPost]="postAux.tPost"></app-post>
 
 
 
