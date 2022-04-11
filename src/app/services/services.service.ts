@@ -15,6 +15,7 @@ export class ServicesService {
   tImage:string;
   tPost:string;
   userlist:any[]
+  postlist:any[]
   public usuariologgeado: any[]
   constructor(private http:HttpClient, private miRouter:Router) {
 
@@ -77,11 +78,13 @@ export class ServicesService {
     this.http.post('http://localhost:3000/api/post/createPost',newPost).subscribe(
       (rest:any)=>{
         alert("post created")
+        this.miRouter.navigate(['tabs','tab1'])
       },
       err=>{
         alert("no se pudo agregar el post")
       }
     )
   }
+
 
 }
