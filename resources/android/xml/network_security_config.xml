@@ -3,4 +3,10 @@
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">localhost</domain>
     </domain-config>
+
+    <base-config cleartextTrafficPermitted="true">
+      <trust-anchords>
+        <cretificates src="system"/>
+      </trust-anchords>
+    </base-config>
 </network-security-config>
