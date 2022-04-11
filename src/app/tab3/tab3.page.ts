@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import {ServicesService} from '../services/services.service'
 
 @Component({
   selector: 'app-tab3',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class Tab3Page {
 
-  constructor(public myRouter:Router) {}
+  constructor(public myRouter:Router,private Haloservice:ServicesService) {}
 
   loggOff(){
    localStorage.removeItem('userRutas');

@@ -13,6 +13,8 @@ export class ServicesService {
   tEmail:string;
   tPassword:string;
   tImage:string;
+  tPost:string;
+  userlist:any[]
   public usuariologgeado: any[]
   constructor(private http:HttpClient, private miRouter:Router) {
 
@@ -55,6 +57,31 @@ export class ServicesService {
       alert("incorret user or password")
     })
 
+  }
+  getUser(){
+    this.userlist=[]
+    this.http.get('http://localhost:3000/api/users/getUser').subscribe(
+      (res:any)=>{
+        this.userlist=res
+        console.log(this.userlist)
+      },
+      err=>{
+        this.userlist=[]
+      }
+    )
+  }
+  createPost(){
+    let newPost={
+      tPost: this.tPost
+    }
+    this.http.post('http://localhost:3000/api/post/createPost',newPost).subscribe(
+      (rest:any)=>{
+        alert("post created")
+      },
+      err=>{
+        alert("no se pudo agregar el post")
+      }
+    )
   }
 
 }
