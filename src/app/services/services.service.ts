@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { url } from 'inspector';
+
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +21,7 @@ export class ServicesService {
   constructor(private http:HttpClient, private miRouter:Router) {
 
     this.postlist = []
-    this.http.get('http://localhost:3000/api/post/getPost').subscribe(
+    this.http.get('http://192.168.100.5:3000/api/post/getPost').subscribe(
       (res:any)=>{
         //Aqui solo se ejecuta si respondió correctamente
         this.postlist = res
@@ -45,7 +45,7 @@ export class ServicesService {
       tPassword: this.tPassword,
       tImage: this.tImage
     }
-    this.http.post('http://localhost:3000/api/users/createUser',newUser).subscribe(
+    this.http.post('http://192.168.100.5:3000/api/users/createUser',newUser).subscribe(
       (rest:any)=>{
         alert("user created")
         this.miRouter.navigate(['./loggin']);
@@ -60,7 +60,7 @@ export class ServicesService {
     let newUser={
       tImage: this.tImage
     }
-    this.http.post('http://localhost:3000/api/users/updateUser',newUser).subscribe(
+    this.http.post('http://192.168.100.5:3000/api/users/updateUser',newUser).subscribe(
       (rest:any)=>{
         alert("user updated")
         this.miRouter.navigate(['tabs','tab1'])
@@ -76,7 +76,7 @@ export class ServicesService {
       tPassword:this.tPassword
     }
 
-    this.http.post('http://localhost:3000/api/users/logginUser',credentials).subscribe
+    this.http.post('http://192.168.100.5:3000/api/users/logginUser',credentials).subscribe
     (res=>{
       localStorage.setItem('user',JSON.stringify(res))
       alert("correct loggin")
@@ -89,7 +89,7 @@ export class ServicesService {
   }
   getUser(){
     this.userlist=[]
-    this.http.get('http://localhost:3000/api/users/getUser').subscribe(
+    this.http.get('http://192.168.100.5:3000/api/users/getUser').subscribe(
       (res:any)=>{
         this.userlist=res
         console.log(this.userlist)
@@ -103,7 +103,7 @@ export class ServicesService {
     let newPost={
       tPost: this.tPost
     }
-    this.http.post('http://localhost:3000/api/post/createPost',newPost).subscribe(
+    this.http.post('http://192.168.100.5:3000/api/post/createPost',newPost).subscribe(
       (rest:any)=>{
         alert("post created")
         this.miRouter.navigate(['tabs','tab1'])
@@ -114,9 +114,6 @@ export class ServicesService {
     )
   }
 
-troleo(){
-  window.open(www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley ,'_system')
-}
 
 
 }
