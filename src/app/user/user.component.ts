@@ -10,6 +10,7 @@ export class UserComponent implements OnInit {
   @Input() tImage=''
   @Input() tNickName=''
   @Input() nAge=''
+  @Input() tEmail=''
 
   constructor() { }
 

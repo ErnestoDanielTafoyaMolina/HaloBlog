@@ -12,7 +12,7 @@ export class AppComponent {
   constructor(private miRouter: Router, public usuarioService : ServicesService) {
     const userInfo =JSON.parse(localStorage.getItem('user'))
     this.usuarioService.usuariologgeado = userInfo
-    console.log(userInfo);
+
 
     if(userInfo != null){
       this.miRouter.navigate(['tabs','tab1'])

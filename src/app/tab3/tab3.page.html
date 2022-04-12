@@ -9,31 +9,25 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-input placeholder="Nombre" type="text" disabled></ion-input>
+          <ion-label placeholder="Nombre" type="text" tName disabled>{{tName}}</ion-label>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-           <ion-input placeholder="Apellido" type="text" disabled></ion-input>
+          <ion-label placeholder="Edad" type="number" disabled>{{nAge}}</ion-label>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-input placeholder="Edad" type="number" disabled></ion-input>
+          <ion-label placeholder="Nombre usuario" type="text" disabled>{{tNickName}}</ion-label>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-input placeholder="Nombre usuario" type="text" disabled></ion-input>
+          <ion-label placeholder="Correo electronico" type="email" disabled>{{tEmail}}</ion-label>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col>
-          <ion-input placeholder="Correo electronico" type="email" disabled></ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col><ion-button (click)="goBack()">añadir</ion-button></ion-col>
         <ion-button (click)="loggOff()">log out </ion-button>
       </ion-row>
     </ion-grid>

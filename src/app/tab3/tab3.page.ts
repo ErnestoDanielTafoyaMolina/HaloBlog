@@ -9,10 +9,21 @@ import {ServicesService} from '../services/services.service'
 })
 export class Tab3Page {
 
-  constructor(public myRouter:Router,private Haloservice:ServicesService) {}
+  tName:string;
+  tNickName:string;
+  nAge:number;
+  tEmail:string;
+
+  constructor(public myRouter:Router,private Haloservice:ServicesService) {
+    const userInfo =JSON.parse(localStorage.getItem('user'))
+    this.tName=userInfo.tName;
+    this.tNickName=userInfo.tNickName;
+    this.nAge=userInfo.nAge;
+    this.tEmail=userInfo.tEmail;
+  }
 
   loggOff(){
-   localStorage.removeItem('userRutas');
+   localStorage.removeItem('user');
     this.myRouter.navigate(['/loggin']);
   }
 

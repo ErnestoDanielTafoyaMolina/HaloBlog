@@ -1,0 +1,19 @@
+ion-card{
+    --background: rgb(36,0,24);
+    --background: radial-gradient(circle, rgba(36,0,24,1) 0%, rgba(49,56,37,0.5074404761904762) 0%, rgba(100,106,36,1) 99%);
+    color:#fff;
+    height: 50vh;
+}
+ion-content{
+  --background: url(../../assets/img/3erf.jpg) 0 0/100% 100% no-repeat;
+}
+ion-button{
+    --background: rgb(222,186,38);
+    --background: radial-gradient(circle, rgba(222,186,38,1) 0%, rgba(49,56,37,0.5074404761904762) 0%, rgba(51,54,31,1) 99%);
+    margin-left: 40%;
+    margin-top: 50%;
+
+}
+ion-label{
+    color: rgb(222,149,38);
+}

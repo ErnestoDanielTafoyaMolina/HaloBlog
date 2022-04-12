@@ -1,5 +1,7 @@
+import { UserComponent } from './../user/user.component';
 import { Component } from '@angular/core';
-import {ServicesService} from '../services/services.service'
+import {ServicesService} from '../services/services.service';
+
 
 @Component({
   selector: 'app-tab1',
@@ -8,6 +10,8 @@ import {ServicesService} from '../services/services.service'
 })
 export class Tab1Page {
 
-  constructor(private HaloService : ServicesService) {}
+  constructor(private HaloService : ServicesService) {
+
+  }
 
 }

@@ -55,6 +55,20 @@ export class ServicesService {
     )
   }
 
+  updateUser(){
+    let newUser={
+      tImage: this.tImage
+    }
+    this.http.post('http://localhost:3000/api/users/updateUser',newUser).subscribe(
+      (rest:any)=>{
+        alert("user updated")
+        this.miRouter.navigate(['tabs','tab1'])
+      },err=>{
+        alert("user haven't been updated")
+      }
+    )
+  }
+
   loggin(){
     let credentials={
       tEmail:this.tEmail,

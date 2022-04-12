@@ -1,7 +1,11 @@
-<ion-row>
-  <ion-col>
-    <ion-input placeholder="Queremos leerte :D" type="text"[(ngModel)]="HaloService.tPost"></ion-input>
-  </ion-col>
-</ion-row>
+<ion-content>
 
-<ion-col><ion-button (click)="HaloService.createPost()">Crear</ion-button></ion-col>
+<ion-card>
+  <ion-card-header><ion-card-header><ion-label>Queremos leerte :D</ion-label></ion-card-header></ion-card-header>
+  <ion-card-content><ion-textarea placeholder="Expresate" type="text"[(ngModel)]="HaloService.tPost"></ion-textarea></ion-card-content>
+  <ion-button (click)="HalosService.createPost()">Subir</ion-button>
+</ion-card>
+
+
+
+</ion-content>
