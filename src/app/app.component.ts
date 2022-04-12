@@ -10,7 +10,7 @@ import {ServicesService} from './services/services.service'
 export class AppComponent {
   logged: boolean
   constructor(private miRouter: Router, public usuarioService : ServicesService) {
-    const userInfo =JSON.parse(localStorage.getItem('userRutas'))
+    const userInfo =JSON.parse(localStorage.getItem('user'))
     this.usuarioService.usuariologgeado = userInfo
     console.log(userInfo);
 
