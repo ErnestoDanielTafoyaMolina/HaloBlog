@@ -1,9 +1,15 @@
-ion-button{
-  height: 25%;
-  width: 25%;
+.centrado{
+  width: 90vw;
 }
 
 ion-content{
   --background: rgb(2,0,36);
   --background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(110,0,255,1) 0%, rgba(222,0,255,1) 76%);
+  text-align:center;
+  margin:20px;
+  padding:20px;
+}
+.troleo{
+  width: 50vw;
+  height:50hv;
 }

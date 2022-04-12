@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { url } from 'inspector';
 
 @Injectable({
   providedIn: 'root'
@@ -112,6 +113,10 @@ export class ServicesService {
       }
     )
   }
+
+troleo(){
+  window.open(www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley ,'_system')
+}
 
 
 }
